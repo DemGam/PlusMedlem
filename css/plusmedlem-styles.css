@@ -409,6 +409,7 @@ nav {
   color: #fff;
   padding: 55px 0;
   background-color: #263c3c;
+  overflow-x: hidden;
 }
 @media (max-width: 700px) {
   .pml-discount {
