@@ -43,6 +43,9 @@ window.addEventListener("load", function () {
 });
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
+  if (header && header.classList.contains("hide")) {
+    header.classList.remove("hide");
+  }
 };
 
 
