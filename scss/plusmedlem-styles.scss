@@ -483,7 +483,6 @@ nav {
     padding-block: 61px;
     flex: 33%;
     flex: calc(33.3333% - var(--gap));
-
     @media (max-width: 991px) {
       padding-inline: 15px;
       flex: 0 1 50%;
@@ -499,39 +498,40 @@ nav {
 
       @media (max-width: 991px) {
         width: 35%;
+        // width: 150px;
       }
       @media (max-width: 600px) {
         width: 48%;
+        // width: 48%;
       }
     }
-
-    &__link-wrapper {
-      word-break: break-word;
-      text-align: center;
+  }
+  &__link-wrapper {
+    word-break: break-word;
+    text-align: center;
+  }
+  &__title,
+  &__link {
+    @media (max-width: 700px) {
+      font-size: 18px;
     }
-    &__title,
-    &__link {
-      @media (max-width: 700px) {
-        font-size: 18px;
-      }
-    }
-    &__link {
-      position: relative;
-      display: inline-block;
-      transition: color 0.3s ease-out;
-      &::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        border-radius: 5px;
-        height: 1px;
-        bottom: 0;
-        left: 0;
-        background: #ff381a;
-        transform-origin: bottom right;
-        transition: transform 0.3s ease-out;
-      }
+  }
+  &__link {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease-out;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      border-radius: 5px;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background: #ff381a;
+      transform-origin: bottom right;
+      transition: transform 0.3s ease-out;
     }
   }
   @media (hover: hover) {
@@ -547,6 +547,10 @@ nav {
     .pml-card__img:hover,
     .pml-card__img:has(~ .pml-card__link-wrapper:hover) {
       transform: scale(1.04);
+    }
+
+    .pml-card__link-wrapper:hover ~ .pml-card__img {
+      border: 1px solid red;
     }
   }
 }
